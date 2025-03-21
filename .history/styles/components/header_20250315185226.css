@@ -1,0 +1,33 @@
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .header__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    flex: 1;
+  }
+  
+  .header__menu {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .header__link {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .header__btn-container {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  

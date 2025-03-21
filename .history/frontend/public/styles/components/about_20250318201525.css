@@ -1,0 +1,54 @@
+/* About Page Styles */
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2xl);
+  }
+  
+  .about__features {
+    display: grid;
+    gap: var(--size-xl);
+    margin-top: var(--size-xl);
+  }
+  
+  .about__card {
+    background: var(--clr-slate100);
+    padding: var(--size-xl);
+    border-radius: 8px;
+    border: 1px solid var(--clr-slate300);
+  }
+  
+  .about__subtitle {
+    font-size: var(--size-lg);
+    margin-bottom: var(--size-xs);
+    color: var(--clr-dark);
+  }
+  
+  /* Contact Page Styles */
+  .auth__input--textarea {
+    height: 120px;
+    resize: vertical;
+    padding-top: var(--size-base);
+  }
+  
+  .contact__info {
+    margin-top: var(--size-2xl);
+    padding: var(--size-xl);
+    background: var(--clr-slate100);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .contact__info .auth__text {
+    margin-bottom: var(--size-base);
+  }
+  
+  @media (max-width: 768px) {
+    .about__features {
+      grid-template-columns: 1fr;
+    }
+    
+    .about__card {
+      padding: var(--size-base);
+    }
+  }

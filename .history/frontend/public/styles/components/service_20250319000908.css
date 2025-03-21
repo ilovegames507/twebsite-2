@@ -1,0 +1,57 @@
+/* Add to existing CSS */
+.service__checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  
+  .service__card.selected {
+    border-color: var(--clr-green);
+    background-color: rgba(0, 128, 0, 0.1);
+  }
+  
+  .service__card.selected .service__cta {
+    background-color: var(--clr-green-hvr);
+  }
+  
+  .service__cta-text::after {
+    content: " ✓";
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .service__card.selected .service__cta-text::after {
+    opacity: 1;
+  }
+  
+  .selected-services-footer {
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    background: var(--clr-white);
+    padding: var(--size-lg);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: bottom 0.3s ease;
+    z-index: 100;
+  }
+  
+  .selected-services-footer.visible {
+    bottom: 0;
+  }
+  
+  .proceed-button {
+    background: var(--clr-green);
+    color: var(--clr-white);
+    padding: var(--size-base) var(--size-2xl);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+  
+  .proceed-button:hover {
+    background: var(--clr-green-hvr);
+    transform: translateY(-2px);
+  }

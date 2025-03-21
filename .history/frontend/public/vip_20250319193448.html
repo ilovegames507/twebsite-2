@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/modern-normalize.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/components/header.css" />
+  <link rel="stylesheet" href="styles/components/vip.css" />
+  <link rel="stylesheet" href="styles/components/footer.css" />
+  <link rel="stylesheet" href="styles/utils.css" />
+  <script type="module" src="src/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+  <title>Marcelins Auto Repair</title>
+</head>
+<body>
+  <header class="header"></header>
+  <section class="vip">
+    <div class="vip__container">
+      <h2 class="vip__title">VIP Maintenance Plans</h2>
+      <div class="vip__tiers">
+        <!-- Bronze Tier -->
+        <div class="vip__tier vip__tier--bronze">
+          <h3 class="vip__status">Bronze VIP</h3>
+          <div class="vip__price">$99<span class="vip__period">/month</span></div>
+          <ul class="vip__privileges">
+            <li class="vip__privilege" v-for="benefit in benefits.Bronze">
+              <svg class="vip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+              {{ benefit }}
+            </li>
+          </ul>
+          <button class="vip__access">Unlock Bronze</button>
+        </div>
+  
+        <!-- Silver Tier (Featured) -->
+        <div class="vip__tier vip__tier--elite vip__tier--silver">
+          <div class="vip__badge">VIP Favorite</div>
+          <h3 class="vip__status">Silver VIP</h3>
+          <div class="vip__price">$199<span class="vip__period">/month</span></div>
+          <ul class="vip__privileges">
+            <li class="vip__privilege" v-for="benefit in benefits.Silver">
+              <svg class="vip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+              {{ benefit }}
+            </li>
+          </ul>
+          <button class="vip__access vip__access--elite">Elevate to Silver</button>
+        </div>
+  
+        <!-- Gold Tier -->
+        <div class="vip__tier vip__tier--gold">
+          <h3 class="vip__status">Gold VIP</h3>
+          <div class="vip__price">$299<span class="vip__period">/month</span></div>
+          <ul class="vip__privileges">
+            <li class="vip__privilege" v-for="benefit in benefits.Gold">
+              <svg class="vip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+              {{ benefit }}
+            </li>
+          </ul>
+          <button class="vip__access">Experience Gold</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+</body>
+</html>

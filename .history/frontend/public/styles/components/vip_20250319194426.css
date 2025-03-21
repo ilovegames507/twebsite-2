@@ -1,0 +1,224 @@
+/* Updated VIP CSS */
+.vip {
+    padding: var(--size-8xl) 0;
+    background: radial-gradient(circle at top left, #1a1a1a 0%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vip__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--size-4xl);
+  }
+  
+  .vip__header {
+    text-align: center;
+    margin-bottom: var(--size-7xl);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .vip__title {
+    font-size: var(--size-6xl);
+    background: linear-gradient(45deg, var(--clr-white) 65%, var(--clr-silver));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: var(--size-2xl);
+    line-height: 1.1;
+  }
+  
+  .vip__subtitle {
+    font-size: var(--size-xl);
+    color: var(--clr-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+  
+  .vip__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-4xl);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .vip__card {
+    background: linear-gradient(145deg, rgba(40,40,40,0.8) 0%, rgba(25,25,25,0.9) 100%);
+    border-radius: 24px;
+    padding: 2px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: var(--transition);
+  }
+  
+  .vip__card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, 
+      rgba(255,255,255,0.1) 0%,
+      rgba(255,255,255,0.3) 50%,
+      rgba(255,255,255,0.1) 100%);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5;
+    transition: var(--transition);
+  }
+  
+  .vip__card-content {
+    background: var(--clr-dark);
+    border-radius: 22px;
+    padding: var(--size-3xl);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vip__card--featured {
+    transform: translateY(-20px);
+  }
+  
+  .vip__card--featured::before {
+    opacity: 0.8;
+  }
+  
+  .vip__badge {
+    position: absolute;
+    top: 20px;
+    right: -44px;
+    background: var(--clr-silver);
+    color: var(--clr-dark);
+    padding: var(--size-xs) var(--size-5xl);
+    transform: rotate(45deg);
+    font-size: var(--size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 3;
+  }
+  
+  .vip__pricing {
+    margin: var(--size-2xl) 0;
+    position: relative;
+  }
+  
+  .vip__amount {
+    font-size: var(--size-6xl);
+    font-weight: 900;
+    line-height: 1;
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--size-xs);
+  }
+  
+  .vip__frequency {
+    font-size: var(--size-lg);
+    font-weight: 500;
+    color: var(--clr-muted);
+  }
+  
+  .vip__savings {
+    font-size: var(--size-sm);
+    color: var(--clr-green);
+    margin-top: var(--size-xs);
+  }
+  
+  .vip__perks {
+    min-height: 280px;
+    margin: var(--size-2xl) 0;
+  }
+  
+  .vip__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-xs);
+    width: 100%;
+    padding: var(--size-xl) var(--size-2xl);
+    border-radius: 16px;
+    font-weight: 700;
+    transition: var(--transition);
+    position: relative;
+  }
+  
+  .vip__cta-icon {
+    width: var(--size-xl);
+    height: var(--size-xl);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .vip__card:hover {
+    transform: translateY(-10px) perspective(1000px) rotateX(5deg) rotateY(5deg);
+  }
+  
+  .vip__card--featured:hover {
+    transform: translateY(-20px) scale(1.02);
+  }
+  
+  .vip__cta:hover .vip__cta-icon {
+    transform: translateX(4px);
+  }
+  
+  /* Tier-specific Gradients */
+  .vip__card--bronze::before {
+    background: linear-gradient(45deg, 
+      var(--clr-bronze) 0%, 
+      rgba(205,127,50,0.5) 50%, 
+      var(--clr-bronze) 100%);
+  }
+  
+  .vip__card--silver::before {
+    background: linear-gradient(45deg, 
+      var(--clr-silver) 0%, 
+      rgba(192,192,192,0.5) 50%, 
+      var(--clr-silver) 100%);
+  }
+  
+  .vip__card--gold::before {
+    background: linear-gradient(45deg, 
+      var(--clr-gold) 0%, 
+      rgba(255,215,0,0.5) 50%, 
+      var(--clr-gold) 100%);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .vip__cards {
+      grid-template-columns: 1fr;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  
+    .vip__card--featured {
+      transform: none;
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .vip__title {
+      font-size: var(--size-4xl);
+    }
+  
+    .vip__subtitle {
+      font-size: var(--size-lg);
+    }
+    
+    .vip__badge {
+      right: -48px;
+      padding: var(--size-xxs) var(--size-4xl);
+    }
+  }

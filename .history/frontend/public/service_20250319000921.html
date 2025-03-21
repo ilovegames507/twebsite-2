@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/modern-normalize.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/components/header.css" />
+  <link rel="stylesheet" href="styles/components/service.css" />
+  <link rel="stylesheet" href="styles/components/footer.css" />
+  <link rel="stylesheet" href="styles/utils.css" />
+  <script type="module" src="src/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+  <title>Marcelins Auto Repair</title>
+</head>
+<body>
+  <header class="header"></header>
+  <section class="services">
+    <div class="services__container">
+      <h2 class="services__title">Our Services</h2>
+      <div class="services__grid">
+        <!-- Modified service card example -->
+        <div class="service__card">
+          <input type="checkbox" class="service__checkbox" id="engineDiagnostics">
+          <h3 class="service__package">Engine Diagnostics</h3>
+          <p class="service__description">Comprehensive computer-based analysis of your vehicle's engine systems.</p>
+          <label for="engineDiagnostics" class="service__cta">
+            <span class="service__cta-text">Select Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </label>
+        </div>
+
+        <!-- Repeat similar structure for other services -->
+        <!-- Add checkbox and update labels for each service card -->
+        
+      </div>
+      <div class="selected-services-footer">
+        <button class="proceed-button">Proceed with Selected Services</button>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    // Toggle selected state
+    document.querySelectorAll('.service__checkbox').forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        this.closest('.service__card').classList.toggle('selected', this.checked);
+      });
+    });
+  
+    // Show/hide proceed button
+    const updateProceedButton = () => {
+      const footer = document.querySelector('.selected-services-footer');
+      const checked = document.querySelectorAll('.service__checkbox:checked').length > 0;
+      footer.classList.toggle('visible', checked);
+    };
+  
+    document.querySelectorAll('.service__checkbox').forEach(checkbox => {
+      checkbox.addEventListener('change', updateProceedButton);
+    });
+  
+    // Handle proceed button click
+    document.querySelector('.proceed-button').addEventListener('click', () => {
+      const selectedServices = Array.from(
+        document.querySelectorAll('.service__checkbox:checked')
+      ).map(checkbox => checkbox.nextElementSibling.textContent);
+      
+      // Add your logic to handle selected services
+      console.log('Selected Services:', selectedServices);
+      alert(`Selected Services: ${selectedServices.join(', ')}`);
+    });
+  });</script>
+</body>
+</html>

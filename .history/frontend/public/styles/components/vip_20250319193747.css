@@ -1,0 +1,111 @@
+/* VIP Section */
+.vip {
+    padding: var(--size-8xl) 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.vip__title {
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--size-6xl);
+}
+
+/* Card Styling */
+.vip__card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.vip__card--bronze {
+    border-bottom: 4px solid var(--clr-bronze);
+}
+
+.vip__card--silver {
+    background: linear-gradient(135deg, rgba(192, 192, 192, 0.1) 0%, rgba(105, 105, 105, 0.2) 100%);
+    border-bottom: 4px solid var(--clr-silver);
+}
+
+.vip__card--gold {
+    border-bottom: 4px solid var(--clr-gold);
+}
+
+/* Color Scheme Additions */
+:root {
+    --clr-bronze: #cd7f32;
+    --clr-bronze-hvr: #b56a28;
+    --clr-silver: #c0c0c0;
+    --clr-silver-hvr: #a8a8a8;
+    --clr-gold: #ffd700;
+    --clr-gold-hvr: #cca300;
+}
+
+/* Enhanced Styling */
+.vip__package {
+    font-size: var(--size-2xl);
+    color: var(--clr-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.vip__amount {
+    color: var(--clr-white);
+    position: relative;
+    display: inline-block;
+}
+
+.vip__amount::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.3;
+}
+
+.vip__checkmark {
+    color: inherit;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+.vip__cta {
+    background: linear-gradient(135deg, currentColor 0%, var(--clr-dark) 150%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Tier-specific Colors */
+.vip__card--bronze .vip__package,
+.vip__card--bronze .vip__amount,
+.vip__card--bronze .vip__checkmark {
+    color: var(--clr-bronze);
+}
+
+.vip__card--silver .vip__package,
+.vip__card--silver .vip__amount,
+.vip__card--silver .vip__checkmark {
+    color: var(--clr-silver);
+}
+
+.vip__card--gold .vip__package,
+.vip__card--gold .vip__amount,
+.vip__card--gold .vip__checkmark {
+    color: var(--clr-gold);
+}
+
+/* Hover Effects */
+.vip__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.vip__cta:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/modern-normalize.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/components/header.css" />
+  <link rel="stylesheet" href="styles/components/vip.css" />
+  <link rel="stylesheet" href="styles/components/footer.css" />
+  <link rel="stylesheet" href="styles/utils.css" />
+  <script type="module" src="src/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+  <title>Marcelins Auto Repair</title>
+</head>
+<body>
+  <header class="header"></header>
+<!-- HTML (updated section only) -->
+<section class="vip">
+    <div class="vip__container">
+      <div class="vip__header">
+        <h2 class="vip__title">Elite Automotive VIP Plans</h2>
+        <p class="vip__subtitle">Experience premium care with our exclusive membership tiers</p>
+      </div>
+      
+      <div class="vip__cards">
+        <!-- Bronze Tier -->
+        <div class="vip__card vip__card--bronze">
+          <div class="vip__card-content">
+            <h3 class="vip__package">Bronze Tier</h3>
+            <div class="vip__pricing">
+              <div class="vip__amount">$149<span class="vip__frequency">/month</span></div>
+              <p class="vip__savings">Save up to 20% annually</p>
+            </div>
+            <ul class="vip__perks">
+              <!-- ... same list items ... -->
+            </ul>
+            <button class="vip__cta">
+              Join Bronze
+              <svg class="vip__cta-icon" viewBox="0 0 24 24">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Silver Tier (Featured) -->
+        <div class="vip__card vip__card--featured vip__card--silver">
+          <div class="vip__badge">Most Popular</div>
+          <div class="vip__card-content">
+            <!-- ... similar structure with added elements ... -->
+          </div>
+        </div>
+  
+        <!-- Gold Tier -->
+        <div class="vip__card vip__card--gold">
+          <div class="vip__card-content">
+            <!-- ... similar structure with added elements ... -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="vip__footer">
+        <p class="vip__disclaimer">All plans include 24/7 roadside assistance and priority scheduling</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+</body>
+</html>

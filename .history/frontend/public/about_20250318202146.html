@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/modern-normalize.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/components/header.css" />
+  <link rel="stylesheet" href="styles/components/about.css" />
+  <link rel="stylesheet" href="styles/components/footer.css" />
+  <link rel="stylesheet" href="styles/utils.css" />
+
+  <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+  <title>Marcelins Auto Repair</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+          <div class="header__title-container"> <img src="https://picsum.photos/1080/1080?random" id="img-link"class="header__logo"
+              alt="Marcelins Auto Repair Logo">
+            <a href="/" class="header__title">Marcelins Auto Repair</a>
+          </div>
+          <nav class="header__nav">
+            <a class="header__link" href="#pricing">Servies</a>
+            <a class="header__link" href="#features">Policy</a>
+            <a class="header__link" href="#contact">Contact</a>
+            <div class="header__btn-container">
+              <button class="header__btn" id="login-link">Login</button>
+            </div>
+          </nav>
+    
+          <button class="header__bars">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+          </button>
+        </div>
+      </header>
+<!-- About Page -->
+<section class="about">
+    <div class="about__container container">
+      <div class="about__content card">
+        <h2 class="about__title">About Us</h2>
+        <div class="about__body">
+          <p class="about__text">
+            At Marcelins Auto Repair, we've been serving the community with trusted automotive care since 2010. 
+            Our certified technicians bring decades of combined experience to every repair.
+          </p>
+          
+          <div class="about__grid">
+            <div class="about__card">
+              <h3 class="about__subtitle">🛠️ Premium Services</h3>
+              <p class="about__description">Full-range diagnostics, engine repair, brake services, and more</p>
+            </div>
+            
+            <div class="about__card">
+              <h3 class="about__subtitle">🏅 Certified Experts</h3>
+              <p class="about__description">ASE-certified technicians with continuous training</p>
+            </div>
+            
+            <div class="about__card">
+              <h3 class="about__subtitle">🔧 Quality Guarantee</h3>
+              <p class="about__description">12-month/12,000-mile warranty on all repairs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Page -->
+  <section class="contact">
+    <div class="contact__container container">
+      <div class="contact__content card">
+        <h2 class="contact__title">Contact Us</h2>
+        <form class="contact__form">
+          <div class="form__field">
+            <input type="text" class="form__input" id="contactName" required>
+            <label class="form__label" for="contactName">Full Name</label>
+            <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+  
+          <div class="form__field">
+            <input type="email" class="form__input" id="contactEmail" required>
+            <label class="form__label" for="contactEmail">Email</label>
+            <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+            </svg>
+          </div>
+  
+          <div class="form__field">
+            <textarea class="form__input form__textarea" id="contactMessage" required></textarea>
+            <label class="form__label" for="contactMessage">Message</label>
+            <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+            </svg>
+          </div>
+  
+          <button type="submit" class="btn btn--primary">Send Message</button>
+  
+          <div class="contact__info">
+            <p class="contact__detail">📞 (555) 123-4567</p>
+            <p class="contact__detail">📍 123 Auto Repair Street, Cityville ST</p>
+            <p class="contact__detail">⏰ Mon-Fri: 8AM - 6PM | Sat: 9AM - 4PM</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h3 class="footer__heading">Contact Us</h3>
+          <p class="footer__text">123 Auto Repair Street</p>
+          <p class="footer__text">Cityville, ST 12345</p>
+          <p class="footer__text">Phone: (555) 123-4567</p>
+          <p class="footer__text">Email: contact@marcelinsauto.com</p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__heading">Hours</h3>
+          <p class="footer__text">Mon-Fri: 8am - 6pm</p>
+          <p class="footer__text">Saturday: 9am - 4pm</p>
+          <p class="footer__text">Sunday: Closed</p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__heading">Quick Links</h3>
+          <a href="#services" class="footer__link">Services</a>
+          <a href="#policy" class="footer__link">Policy</a>
+          <a href="#contact" class="footer__link">Contact</a>
+          <a href="#about" class="footer__link">About Us</a>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__heading">Follow Us</h3>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="TicTok">
+              <img src="src/Images/tictok.svg" alt="TicTok">
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <img src="src/Images/instagram.svg" alt="Instagram">
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <img src="src/Images/youtube.svg" alt="YouTube">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2024 Marcelins Auto Repair. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('img-link').addEventListener('click', function () {
+      window.location.href = '/';
+    });
+    document.querySelector('.header__bars').addEventListener('click', function () {
+      document.querySelector('.header').classList.toggle('header--mobile-open');
+    });
+    document.getElementById('login-link').addEventListener('click', function () {
+      window.location.href = '/login';
+    });
+  </script>
+</body>
+
+</html>

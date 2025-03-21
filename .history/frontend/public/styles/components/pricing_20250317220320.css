@@ -1,0 +1,147 @@
+/* Pricing Section */
+.pricing {
+    padding: var(--size-8xl) 0;
+    background-color: var(--clr-light);
+  }
+  
+  .pricing__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--size-2xl);
+  }
+  
+  .pricing__title {
+    font-size: var(--size-4xl);
+    text-align: center;
+    margin-bottom: var(--size-5xl);
+    color: var(--clr-dark);
+  }
+  
+  .pricing__cards {
+    display: flex;
+    gap: var(--size-2xl);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pricing__card {
+    background: white;
+    border-radius: 12px;
+    padding: var(--size-2xl);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 360px;
+    position: relative;
+    transition: var(--transition);
+  }
+  
+  .pricing__card--featured {
+    background: var(--clr-slate50);
+    border: 2px solid var(--clr-dark);
+    transform: scale(1.05);
+    z-index: 1;
+    margin: 0 var(--size-xxs);
+  }
+  
+  .pricing__badge {
+    position: absolute;
+    top: -15px;
+    transform: translateX(-50%);
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    padding: var(--size-xxs) var(--size-xl);
+    border-radius: 50px;
+    font-size: var(--size-sm);
+    font-weight: 600;
+  }
+  
+  .pricing__package {
+    font-size: var(--size-xl);
+    margin-bottom: var(--size-lg);
+    color: var(--clr-gray);
+    text-align: center;
+  }
+  
+  .pricing__amount {
+    font-size: var(--size-4xl);
+    font-weight: 700;
+    margin-bottom: var(--size-2xl);
+    color: var(--clr-dark);
+    text-align: center;
+  }
+  
+  .pricing__frequency {
+    font-size: var(--size-base);
+    color: var(--clr-muted);
+  }
+  
+  .pricing__perks {
+    list-style: none;
+    margin-bottom: var(--size-2xl);
+    text-align: left;
+    min-height: 200px;
+  }
+  
+  .pricing__perk {
+    display: flex;
+    align-items: center;
+    gap: var(--size-sm);
+    margin-bottom: var(--size-base);
+    color: var(--clr-gray);
+    font-size: var(--size-sm);
+  }
+  
+  .pricing__checkmark {
+    width: var(--size-base);
+    height: var(--size-base);
+    color: #10b981;
+    flex-shrink: 0;
+  }
+  
+  .pricing__cta {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: var(--size-base) var(--size-xl);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    width: 100%;
+    font-size: var(--size-sm);
+  }
+  
+  .pricing__cta--featured {
+    background-color: #10b981;
+  }
+  
+  .pricing__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+  
+  @media (max-width: 768px) {
+    .pricing__cards {
+      flex-direction: column;
+    }
+  
+    .pricing__card {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .pricing__card--featured {
+      transform: none;
+      margin: 0;
+    }
+    
+    .pricing__title {
+      font-size: var(--size-3xl);
+    }
+    
+    .pricing__package {
+      font-size: var(--size-lg);
+    }
+    
+    .pricing__amount {
+      font-size: var(--size-3xl);
+    }
+  }

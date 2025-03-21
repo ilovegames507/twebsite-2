@@ -1,0 +1,127 @@
+/* About Page */
+.about__container {
+    padding: var(--size-8xl) 0;
+  }
+  
+  .about__content {
+    background: var(--clr-white);
+    border-radius: 12px;
+    padding: var(--size-3xl);
+    box-shadow: var(--shadow);
+  }
+  
+  .about__title {
+    font-size: var(--size-3xl);
+    text-align: center;
+    margin-bottom: var(--size-2xl);
+    color: var(--clr-dark);
+  }
+  
+  .about__grid {
+    display: grid;
+    gap: var(--size-xl);
+    margin-top: var(--size-xl);
+  }
+  
+  .about__card {
+    background: var(--clr-slate100);
+    padding: var(--size-xl);
+    border-radius: 8px;
+    border: 1px solid var(--clr-slate300);
+  }
+  
+  .about__subtitle {
+    font-size: var(--size-lg);
+    margin-bottom: var(--size-xs);
+  }
+  
+  /* Contact Page */
+  .contact__container {
+    padding: var(--size-8xl) 0;
+  }
+  
+  .contact__content {
+    background: var(--clr-white);
+    border-radius: 12px;
+    padding: var(--size-3xl);
+    box-shadow: var(--shadow);
+  }
+  
+  .contact__title {
+    font-size: var(--size-3xl);
+    text-align: center;
+    margin-bottom: var(--size-2xl);
+  }
+  
+  .form__textarea {
+    height: 120px;
+    resize: vertical;
+    padding-top: var(--size-base);
+  }
+  
+  .contact__info {
+    margin-top: var(--size-2xl);
+    padding: var(--size-xl);
+    background: var(--clr-slate100);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .contact__detail {
+    margin-bottom: var(--size-base);
+    color: var(--clr-text);
+  }
+  
+  /* Shared Form Styles */
+  .form__field {
+    position: relative;
+    margin-bottom: var(--size-2xl);
+  }
+  
+  .form__label {
+    position: absolute;
+    left: var(--size-3xl);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--clr-text);
+    font-size: var(--size-sm);
+    transition: var(--transition);
+    pointer-events: none;
+    background: var(--clr-white);
+    padding: 0 4px;
+    margin-left: calc(-1 * var(--size-base));
+  }
+  
+  .form__input {
+    width: 100%;
+    padding: var(--size-base);
+    border: 1px solid var(--clr-slate300);
+    border-radius: 8px;
+    font-size: var(--size-sm);
+    transition: var(--transition);
+    padding-left: var(--size-4xl);
+  }
+  
+  .form__input:focus {
+    border-color: var(--clr-green);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  }
+  
+  .form__input:focus ~ .form__label,
+  .form__input:not(:placeholder-shown) ~ .form__label {
+    top: 0;
+    transform: translateY(-50%) scale(0.9);
+    color: var(--clr-green);
+  }
+  
+  .form__icon {
+    position: absolute;
+    left: var(--size-base);
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--size-xl);
+    height: var(--size-xl);
+    color: var(--clr-slate300);
+    transition: var(--transition);
+  }

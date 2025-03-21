@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/modern-normalize.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/components/header.css" />
+  <link rel="stylesheet" href="styles/components/service.css" />
+  <link rel="stylesheet" href="styles/components/footer.css" />
+  <link rel="stylesheet" href="styles/utils.css" />
+  <script type="module" src="src/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+  <title>Marcelins Auto Repair</title>
+</head>
+<body>
+  <header class="header"></header>
+<!-- Add this cart summary section after the services title -->
+<section class="services">
+    <div class="services__container">
+      <h2 class="services__title">Our Services</h2>
+      
+      <!-- Appointment Summary -->
+      <div class="appointment-summary">
+        <h3 class="appointment-summary__title">Selected Services (<span class="appointment-summary__count">0</span>)</h3>
+        <ul class="appointment-summary__list"></ul>
+        <button class="appointment-summary__cta" disabled>Proceed to Booking</button>
+      </div>
+  
+      <!-- Services Grid -->
+      <div class="services__grid">
+        <!-- Updated Service Card with selection -->
+        <div class="service__card">
+          <div class="service__header">
+            <h3 class="service__package">Engine Diagnostics</h3>
+            <button class="service__select">
+              <svg class="service__check" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+              </svg>
+            </button>
+          </div>
+          <p class="service__description">Comprehensive computer-based analysis...</p>
+          <div class="service__quantity">
+            <button class="quantity__btn" aria-label="Decrease quantity">-</button>
+            <input type="number" class="quantity__input" value="1" min="1" max="10">
+            <button class="quantity__btn" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <!-- Repeat for other service cards -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Add this booking form at bottom -->
+  <div class="booking-modal">
+    <div class="booking-modal__content">
+      <h3 class="booking-modal__title">Book Appointment</h3>
+      <form class="booking-form">
+        <div class="form__group">
+          <label>Name</label>
+          <input type="text" required>
+        </div>
+        <div class="form__group">
+          <label>Email</label>
+          <input type="email" required>
+        </div>
+        <div class="form__group">
+          <label>Preferred Date & Time</label>
+          <input type="datetime-local" required>
+        </div>
+        <button type="submit" class="booking-modal__cta">Confirm Appointment</button>
+      </form>
+    </div>
+  </div>
+  <footer class="footer"></footer>
+</body>
+</html>

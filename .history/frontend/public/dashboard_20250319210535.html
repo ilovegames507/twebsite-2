@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/modern-normalize.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/components/header.css" />
+    <link rel="stylesheet" href="styles/components/dashboard.css" />
+    <link rel="stylesheet" href="styles/components/footer.css" />
+    <link rel="stylesheet" href="styles/utils.css" />
+    <script type="module" src="src/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+    <title>Marcelins Auto Repair</title>
+</head>
+
+<body>
+    <header class="header"></header>
+    <section class="dashboard hidden">
+        <div class="dashboard__container">
+          <!-- Dashboard Header -->
+          <header class="dashboard__header">
+            <div>
+              <h1 class="dashboard__title">Welcome, [User Name]</h1>
+              <p class="dashboard__subtitle">Marcelins Auto Repair Dashboard</p>
+            </div>
+            <button class="dashboard__logout">Log Out</button>
+          </header>
+      
+          <!-- Stats Grid -->
+          <div class="dashboard__stats">
+            <div class="dashboard__card">
+              <div class="dashboard__card-header">
+                <h3>Upcoming Appointments</h3>
+                <span class="dashboard__card-badge">3 New</span>
+              </div>
+              <p class="dashboard__card-number">5</p>
+              <div class="dashboard__card-footer">
+                <a href="#appointments" class="auth__link">View All</a>
+              </div>
+            </div>
+      
+            <div class="dashboard__card">
+              <div class="dashboard__card-header">
+                <h3>Recent Services</h3>
+              </div>
+              <p class="dashboard__card-number">2 Completed</p>
+              <div class="dashboard__card-footer">
+                <a href="#services" class="auth__link">View History</a>
+              </div>
+            </div>
+      
+            <div class="dashboard__card">
+              <div class="dashboard__card-header">
+                <h3>Loyalty Points</h3>
+              </div>
+              <p class="dashboard__card-number">1,250 Pts</p>
+              <div class="dashboard__card-footer">
+                <a href="#rewards" class="auth__link">Redeem</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Main Content -->
+          <div class="dashboard__content">
+            <!-- Recent Appointments -->
+            <div class="dashboard__section">
+              <h2 class="dashboard__section-title">Recent Appointments</h2>
+              <div class="dashboard__table">
+                <div class="dashboard__table-row header">
+                  <div>Date</div>
+                  <div>Service</div>
+                  <div>Vehicle</div>
+                  <div>Status</div>
+                </div>
+                <!-- Repeat for each appointment -->
+                <div class="dashboard__table-row">
+                  <div>2024-03-15</div>
+                  <div>Oil Change</div>
+                  <div>Honda Civic</div>
+                  <div><span class="dashboard__status completed">Completed</span></div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Quick Actions -->
+            <div class="dashboard__actions">
+              <button class="auth__button">
+                Schedule New Service
+              </button>
+              <button class="auth__button auth__button--google">
+                Upload Vehicle Documents
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    <footer class="footer"></footer>
+    <script>
+        document.querySelector('#loginForm form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          document.querySelector('.auth').classList.add('hidden');
+          document.querySelector('.dashboard').classList.remove('hidden');
+        });
+        
+        document.querySelector('.dashboard__logout').addEventListener('click', () => {
+          document.querySelector('.auth').classList.remove('hidden');
+          document.querySelector('.dashboard').classList.add('hidden');
+        });
+        </script>
+</body>
+
+</html>

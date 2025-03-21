@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Existing meta tags and links -->
+    <!-- Add modern CSS variables and mobile-friendly viewport settings -->
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__title">Marcelins Auto Repair</a>
+        
+        <nav class="header__nav">
+          <a class="header__link" href="#pricing">Pricing</a>
+          <a class="header__link" href="#features">Features</a>
+          <a class="header__link" href="#contact">Contact</a>
+          <div class="header__btn-container">
+            <button class="header__btn">Login</button>
+            <button class="header__btn">Enter App</button>
+          </div>
+        </nav>
+        
+        <button class="header__bars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Add simple JavaScript for mobile menu toggle -->
+    <script>
+      document.querySelector('.header__bars').addEventListener('click', function() {
+        document.querySelector('.header').classList.toggle('header--mobile-open');
+      });
+    </script>
+  </body>
+</html>

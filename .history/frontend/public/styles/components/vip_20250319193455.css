@@ -1,0 +1,90 @@
+/* VIP Section */
+.vip {
+    padding: var(--size-8xl) 0;
+  }
+  
+  .vip__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--size-2xl);
+  }
+  
+  .vip__title {
+    font-size: var(--size-4xl); 
+    text-align: center;
+    margin-bottom: var(--size-5xl);
+  }
+  
+  .vip__tiers {
+    display: flex;
+    gap: var(--size-2xl);
+    justify-content: center;
+  }
+  
+  .vip__tier {
+    background: var(--clr-white);
+    border-radius: 12px;
+    padding: var(--size-2xl);
+    flex: 1;
+    max-width: 360px;
+    position: relative;
+  }
+  
+  .vip__tier--elite {
+    transform: scale(1.05);
+    z-index: 1;
+    margin: 0 var(--size-xxs);
+  }
+  
+  .vip__badge {
+    position: absolute;
+    top: -15px;
+    transform: translateX(-50%);
+  }
+  
+  .vip__status {
+    font-size: var(--size-xl);
+    margin-bottom: var(--size-lg);
+    text-align: center;
+  }
+  
+  .vip__price {
+    font-size: var(--size-4xl);
+    margin-bottom: var(--size-2xl);
+    text-align: center;
+  }
+  
+  .vip__period {
+    font-size: var(--size-base);
+  }
+  
+  .vip__privileges {
+    list-style: none;
+    margin-bottom: var(--size-2xl);
+    min-height: 200px;
+  }
+  
+  .vip__privilege {
+    display: flex;
+    align-items: center;
+    gap: var(--size-sm);
+    margin-bottom: var(--size-base);
+  }
+  
+  .vip__icon {
+    width: var(--size-base);
+    height: var(--size-base);
+    flex-shrink: 0;
+  }
+  
+  .vip__access {
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    padding: var(--size-base) var(--size-xl);
+    border-radius: 50px;
+    width: 100%;
+  }
+  
+  .vip__access--elite {
+    background: var(--clr-green);
+  }

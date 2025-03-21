@@ -1,0 +1,117 @@
+/* Add to your CSS */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.footer {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: var(--size-4xl) 0 0;
+    margin-top: auto;
+}
+
+.footer__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--size-2xl);
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--size-2xl);
+    padding-bottom: var(--size-4xl);
+}
+
+.footer__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-base);
+}
+
+.footer__heading {
+    font-size: var(--size-lg);
+    font-weight: 600;
+    margin-bottom: var(--size-xs);
+    color: var(--clr-light);
+}
+
+.footer__text {
+    font-size: var(--size-sm);
+    color: var(--clr-slate300);
+    line-height: 1.6;
+}
+
+.footer__link {
+    color: var(--clr-slate300);
+    text-decoration: none;
+    font-size: var(--size-sm);
+    transition: var(--transition);
+}
+
+.footer__link:hover {
+    color: var(--clr-light);
+    transform: translateX(4px);
+}
+
+.footer__socials {
+    display: flex;
+    gap: var(--size-base);
+    margin-top: var(--size-xs);
+  }
+  
+  .footer__social-link {
+    color: var(--clr-slate300);
+    transition: var(--transition);
+    padding: var(--size-sm);
+    display: flex;
+  }
+  
+  .footer__social-link:hover {
+    color: var(--clr-light);
+    transform: translateY(-2px);
+  }
+  
+  .footer__social-link svg {
+    width: var(--size-xl);
+    height: var(--size-xl);
+    fill: currentColor;
+  }
+
+.footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--size-xl) 0;
+    text-align: center;
+}
+
+.footer__copy {
+    font-size: var(--size-sm);
+    color: var(--clr-slate300);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer__section {
+        align-items: center;
+    }
+
+    .footer__link:hover {
+        transform: none;
+    }
+}

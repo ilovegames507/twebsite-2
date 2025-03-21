@@ -1,0 +1,129 @@
+:root {
+    /* Updated Color Scheme with better contrast */
+    --clr-dark: #1a1a1a;
+    --clr-light: #f8f9fa;
+    --clr-white: #ffffff;
+    --clr-bronze: #8a5c2e;
+    --clr-silver: #6b7280;
+    --clr-gold: #b59b3e;
+    --clr-muted: #4b5563;
+    --clr-card-bg: rgba(255, 255, 255, 0.95);
+  }
+  
+  .vip {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e5e9ed 100%);
+  }
+  
+  .vip__title {
+    color: var(--clr-dark);
+    background: linear-gradient(45deg, var(--clr-dark) 30%, var(--clr-silver));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .vip__subtitle {
+    color: var(--clr-muted);
+  }
+  
+  .vip__card {
+    background: var(--clr-card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .vip__card::before {
+    background: linear-gradient(45deg, 
+      rgba(0, 0, 0, 0.03) 0%,
+      rgba(0, 0, 0, 0.08) 50%,
+      rgba(0, 0, 0, 0.03) 100%);
+  }
+  
+  .vip__card-content {
+    background: transparent;
+  }
+  
+  .vip__package {
+    color: var(--clr-dark);
+  }
+  
+  .vip__amount {
+    color: var(--clr-dark);
+  }
+  
+  .vip__frequency {
+    color: var(--clr-muted);
+  }
+  
+  .vip__perk {
+    color: var(--clr-dark);
+    background: rgba(0, 0, 0, 0.03);
+  }
+  
+  .vip__checkmark {
+    fill: currentColor;
+  }
+  
+  /* Tier-specific adjustments */
+  .vip__card--bronze .vip__package,
+  .vip__card--bronze .vip__amount {
+    color: var(--clr-bronze);
+  }
+  
+  .vip__card--silver .vip__package,
+  .vip__card--silver .vip__amount {
+    color: var(--clr-silver);
+  }
+  
+  .vip__card--gold .vip__package,
+  .vip__card--gold .vip__amount {
+    color: var(--clr-gold);
+  }
+  
+  .vip__cta {
+    background: var(--clr-dark);
+    color: var(--clr-white) !important;
+  }
+  
+  .vip__cta:hover {
+    background: var(--clr-muted);
+  }
+  
+  .vip__badge {
+    background: var(--clr-dark);
+    color: var(--clr-white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .vip__savings {
+    color: var(--clr-bronze);
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .vip__cards {
+      grid-template-columns: 1fr;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  
+    .vip__card--featured {
+      transform: none;
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .vip__title {
+      font-size: var(--size-4xl);
+    }
+  
+    .vip__subtitle {
+      font-size: var(--size-lg);
+    }
+    
+    .vip__badge {
+      right: -48px;
+      padding: var(--size-xxs) var(--size-4xl);
+    }
+  }
