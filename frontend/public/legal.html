@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/modern-normalize.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/components/header.css" />
+    <link rel="stylesheet" href="styles/components/legal.css" />
+    <link rel="stylesheet" href="styles/components/footer.css" />
+    <link rel="stylesheet" href="styles/utils.css" />
+    <script type="module" src="src/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+    <title>Marcelins Auto Repair</title>
+</head>
+
+<body>
+    <header class="header"></header>
+    <section class="policy">
+        <div class="policy__container">
+            <!-- Tab Buttons -->
+            <div class="policy__tabs">
+                <button class="policy__tab policy__tab--active" data-content="tos">Terms of Service</button>
+                <button class="policy__tab" data-content="privacy">Privacy Policy</button>
+            </div>
+    
+            <!-- TOS Content -->
+            <div class="policy__content policy__content--active" id="tos">
+                <h2 class="policy__title">Terms of Service</h2>
+                <div class="policy__text">
+                    <p>Last Updated: [Insert Date]</p>
+                    
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>By accessing or using [Your Company Name]'s services, website, or applications (collectively "Services"), you agree to be bound by these Terms of Service. If you disagree with any part, you may not use our Services.</p>
+    
+                    <h3>2. User Responsibilities</h3>
+                    <p>You agree to: a) Provide accurate information when creating an account b) Maintain password confidentiality c) Not engage in illegal activities or violate others' rights d) Not reverse engineer or disrupt our Services</p>
+    
+                    <h3>3. Payments and Subscriptions</h3>
+                    <p>For paid services: a) You authorize recurring payments b) Fees are non-refundable unless required by law c) We may change prices with 30-day notice</p>
+    
+                    <h3>4. Termination</h3>
+                    <p>We reserve the right to suspend or terminate accounts for violations of these terms. You may delete your account at any time through your account settings.</p>
+    
+                    <h3>5. Disclaimers</h3>
+                    <p>Services are provided "AS IS" without warranties. We do not guarantee uninterrupted or error-free service. You use the Services at your own risk.</p>
+    
+                    <h3>6. Limitation of Liability</h3>
+                    <p>[Your Company Name] shall not be liable for any indirect, incidental, or consequential damages arising from use of our Services.</p>
+    
+                    <h3>7. Governing Law</h3>
+                    <p>These terms are governed by the laws of [Your State/Country]. Any disputes shall be resolved in courts located in [Jurisdiction].</p>
+    
+                    <h3>8. Changes to Terms</h3>
+                    <p>We may modify these terms at any time. Continued use after changes constitutes acceptance. We will notify users of material changes via email or website notice.</p>
+                </div>
+            </div>
+    
+            <!-- Privacy Policy Content -->
+            <div class="policy__content" id="privacy">
+                <h2 class="policy__title">Privacy Policy</h2>
+                <div class="policy__text">
+                    <p>Last Updated: [Insert Date]</p>
+                    
+                    <h3>1. Information We Collect</h3>
+                    <p>We collect: a) Personal information you provide (name, email, payment info) b) Usage data through cookies c) Device information d) Location data (if enabled)</p>
+    
+                    <h3>2. Use of Information</h3>
+                    <p>We use data to: a) Provide and improve Services b) Process transactions c) Communicate with you d) Prevent fraud e) Comply with legal obligations</p>
+    
+                    <h3>3. Data Sharing</h3>
+                    <p>We may share information with: a) Service providers (payment processors, hosting) b) Legal authorities when required c) Affiliates and partners (with consent)</p>
+    
+                    <h3>4. Data Security</h3>
+                    <p>We implement SSL encryption, regular security audits, and access controls. However, no electronic transmission is 100% secure.</p>
+    
+                    <h3>5. Your Rights</h3>
+                    <p>You may: a) Access your personal data b) Request deletion c) Opt-out of marketing d) Update account information through your profile settings</p>
+    
+                    <h3>6. Cookies</h3>
+                    <p>We use essential, functional, and analytics cookies. You can manage preferences through your browser settings. Third-party cookies are subject to their policies.</p>
+    
+                    <h3>7. Children's Privacy</h3>
+                    <p>Our Services are not directed at children under 13. We do not knowingly collect data from children under 13. Contact us if you believe we have inadvertently collected such data.</p>
+    
+                    <h3>8. International Transfers</h3>
+                    <p>Data may be transferred to and processed in countries outside your residence. We ensure adequate protection through Standard Contractual Clauses or other legal mechanisms.</p>
+    
+                    <h3>9. Policy Changes</h3>
+                    <p>We will notify users of material changes via email or website notice. Continued use after changes constitutes acceptance.</p>
+    
+                    <h3>10. Contact Us</h3>
+                    <p>For privacy concerns: <br>
+                    Email: [privacy@yourcompany.com] <br>
+                    Address: [Your Company Address]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer"></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.policy__tab');
+            const contents = document.querySelectorAll('.policy__content');
+    
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active classes
+                    tabs.forEach(t => t.classList.remove('policy__tab--active'));
+                    contents.forEach(c => c.classList.remove('policy__content--active'));
+    
+                    // Add active classes
+                    tab.classList.add('policy__tab--active');
+                    document.getElementById(tab.dataset.content)
+                        .classList.add('policy__content--active');
+                });
+            });
+        });
+    </script>    
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/modern-normalize.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/components/header.css" />
+  <link rel="stylesheet" href="styles/components/vehicles.css" />
+  <link rel="stylesheet" href="styles/components/footer.css" />
+  <link rel="stylesheet" href="styles/utils.css" />
+  <script type="module" src="src/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico">
+  <title>Marcelins Auto Repair</title>
+</head>
+<body>
+  <header class="header"></header>
+  <section class="dashboard">
+    <div class="dashboard__container">
+        <header class="dashboard__header">
+            <div>
+                <h1 class="dashboard__title">Vehicle Management</h1>
+                <p class="dashboard__subtitle">3 vehicles covered</p>
+            </div>
+            <button class="auth__button">Add Vehicle</button>
+        </header>
+
+        <!-- Add Vehicle Form -->
+        <div class="dashboard__section hidden" id="addVehicleForm">
+            <h2 class="dashboard__section-title">Add New Vehicle</h2>
+            <form class="settings__grid">
+                <div class="settings__form-group">
+                    <label class="settings__label">Make</label>
+                    <input type="text" class="settings__input" required>
+                </div>
+                <div class="settings__form-group">
+                    <label class="settings__label">Model</label>
+                    <input type="text" class="settings__input" required>
+                </div>
+                <div class="settings__form-group">
+                    <label class="settings__label">Year</label>
+                    <input type="number" class="settings__input" required>
+                </div>
+                <div class="settings__form-group">
+                    <label class="settings__label">VIN</label>
+                    <input type="text" class="settings__input" required>
+                </div>
+                <button type="submit" class="auth__button">Save Vehicle</button>
+            </form>
+        </div>
+
+        <!-- Vehicle List -->
+        <div class="dashboard__section">
+            <h2 class="dashboard__section-title">Covered Vehicles</h2>
+            <div class="dashboard__table">
+                <div class="dashboard__table-row header">
+                    <div>Make/Model</div>
+                    <div>Year</div>
+                    <div>VIN</div>
+                    <div>Status</div>
+                </div>
+                <div class="dashboard__table-row">
+                    <div>Honda Civic</div>
+                    <div>2020</div>
+                    <div>1HGBH41JXMN109186</div>
+                    <div><span class="dashboard__status completed">Active</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <footer class="footer"></footer>
+</body>
+</html>

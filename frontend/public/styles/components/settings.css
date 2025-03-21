@@ -1,0 +1,114 @@
+/* Add to your CSS */
+.settings {
+    padding: var(--size-8xl) 0;
+    background-color: var(--clr-light);
+    min-height: calc(100vh - 82px);
+}
+
+.settings__card {
+    background: var(--clr-white);
+    padding: var(--size-2xl);
+    border-radius: 12px;
+    margin-bottom: var(--size-2xl);
+    box-shadow: var(--shadow);
+}
+
+.settings__card-header {
+    border-bottom: 1px solid var(--clr-slate300);
+    padding-bottom: var(--size-base);
+    margin-bottom: var(--size-xl);
+}
+
+.settings__card-header h2 {
+    font-size: var(--size-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--size-xs);
+}
+
+.settings__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-base) 0;
+    border-bottom: 1px solid var(--clr-slate100);
+}
+
+.settings__item:last-child {
+    border-bottom: none;
+}
+
+.settings__item-content h3 {
+    font-size: var(--size-base);
+    margin-bottom: var(--size-xxs);
+}
+
+.settings__item-content p {
+    font-size: var(--size-sm);
+    color: var(--clr-muted);
+}
+
+.vip-status {
+    text-align: center;
+    padding: var(--size-xl) 0;
+}
+
+.vip-badge {
+    display: inline-block;
+    padding: var(--size-xs) var(--size-xl);
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: var(--size-base);
+}
+
+.vip-badge.gold {
+    background: linear-gradient(to right, var(--clr-gold), var(--clr-gold-hvr));
+    color: var(--clr-dark);
+}
+
+.vip-expiry {
+    color: var(--clr-muted);
+    margin-bottom: var(--size-xl);
+}
+
+.vip-perks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--size-base);
+    margin-bottom: var(--size-2xl);
+}
+
+.perk {
+    background: var(--clr-slate100);
+    padding: var(--size-xs);
+    border-radius: 8px;
+    font-size: var(--size-sm);
+}
+
+.danger-zone .settings__item-content h3 {
+    color: #dc2626;
+}
+
+.auth__button--danger {
+    background: #dc2626;
+}
+
+.auth__button--danger:hover {
+    background: #b91c1c;
+}
+
+@media (max-width: 768px) {
+    .settings__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size-base);
+    }
+    
+    .vip-perks {
+        grid-template-columns: 1fr;
+    }
+    
+    .settings__card {
+        padding: var(--size-base);
+    }
+}
