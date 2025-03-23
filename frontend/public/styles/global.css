@@ -18,20 +18,19 @@
   --glass-effect: blur(10px);
 
   /* colors */
-  --clr-dark: #000000;
-  --clr-gray: #2b2b2b;
-  --clr-light: #c5e4c1;
+  --clr-dark: #0a0a0a;
+  --clr-light: #f8fafc;
   --clr-white: #ffffff;
-  --clr-white-hvr: #dddddd;
   --clr-green: #10b981;
   --clr-green-hvr: #10996b;
-
-  --clr-slate50: #f8fafc;
+  --clr-gray: #2b2b2b;
   --clr-slate100: #f1f5f9;
   --clr-slate300: #cbd5e1;
-  --clr-text: #94a3b8;
   --clr-slate800: #1e293b;
-  --clr-bg: #0a101f;
+  --clr-muted: #64748b;
+  --clr-success: #166534;
+  --clr-warning: #854d0e;
+  --clr-info: #155e75;
 
   --clr-muted: #4a5566;
 
