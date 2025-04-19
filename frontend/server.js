@@ -104,6 +104,32 @@ app.post("/register-webhook", async (req, res) => {
         res.status(500).json({ error: "Failed to register webhook" });
     }
 });
+// ✅ Handle contact form submission
+app.post("/contact", async (req, res) => {
+    try {
+        const { name, email, phone, message } = req.body;
+
+        if (!name || !email || !message) {
+            return res.status(400).json({ error: "Missing required fields" });
+        }
+
+        const contactData = {
+            name,
+            email,
+            phone: phone || null,
+            message,
+            submitted_at: new Date().toISOString()
+        };
+
+        await db.collection("contact_submissions").add(contactData);
+
+        res.status(200).json({ message: "Message received! We'll get back to you soon." });
+    } catch (error) {
+        console.error("Contact Form Error:", error);
+        res.status(500).json({ error: "Something went wrong. Try again later." });
+    }
+});
+
 
 // ✅ Start Server
 app.listen(PORT, () => {

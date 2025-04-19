@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/modern-normalize.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/components/header.css" />
+    <link rel="stylesheet" href="styles/components/reviewpage.css" />
+    <link rel="stylesheet" href="styles/components/footer.css" />
+    <link rel="stylesheet" href="styles/utils.css" />
+    <script type="module" src="src/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/src/Images/favicon.ico" />
+    <title>Marcelin's Auto Repair</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+
+    <section class="reviews-page">
+      <div class="reviews-page__container">
+        <div class="reviews-page__header">
+          <h1 class="reviews-page__title">Customer Reviews</h1>
+          <p class="reviews-page__subtitle">
+            See what our customers are saying about their experience with
+            Marcelins Auto Repair.
+          </p>
+        </div>
+
+        <div class="reviews-page__stats">
+          <div class="reviews-page__stat">
+            <svg
+              class="reviews-page__stat-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <span class="reviews-page__stat-value">4.9</span>
+            <span class="reviews-page__stat-label">Average Rating</span>
+          </div>
+
+          <div class="reviews-page__stat">
+            <svg
+              class="reviews-page__stat-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+              />
+            </svg>
+            <span class="reviews-page__stat-value">500+</span>
+            <span class="reviews-page__stat-label">Google Reviews</span>
+          </div>
+
+          <div class="reviews-page__stat">
+            <svg
+              class="reviews-page__stat-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+            <span class="reviews-page__stat-value">89%</span>
+            <span class="reviews-page__stat-label">Return Customers</span>
+          </div>
+
+          <div class="reviews-page__stat">
+            <svg
+              class="reviews-page__stat-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"
+              />
+            </svg>
+            <span class="reviews-page__stat-value">1,200+</span>
+            <span class="reviews-page__stat-label">Total Reviews</span>
+          </div>
+        </div>
+
+        <div class="reviews-page__filters">
+          <button class="reviews-page__filter reviews-page__filter--active">
+            All Reviews
+          </button>
+          <button class="reviews-page__filter">5 Stars</button>
+          <button class="reviews-page__filter">Google</button>
+          <button class="reviews-page__filter">Yelp</button>
+          <button class="reviews-page__filter">Facebook</button>
+          <button class="reviews-page__filter">Recent</button>
+        </div>
+
+        <div class="reviews-page__grid">
+          <!-- Review Card 1 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__stars">
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card__source">
+                <svg
+                  class="review-card__source-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                <span class="review-card__source-name">Google</span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              "I've been taking my vehicles to Marcelins for over 5 years now.
+              Their Complete Care plan has saved me so much money and headache.
+              They're always honest about what needs to be fixed now versus what
+              can wait. I wouldn't trust my car with anyone else!"
+            </p>
+            <div class="review-card__author">
+              <img
+                src="https://picsum.photos/50/50?random=1"
+                alt="Customer"
+                class="review-card__avatar"
+              />
+              <div>
+                <h4 class="review-card__name">David Martinez</h4>
+                <p class="review-card__date">March 15, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 2 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__stars">
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card__source">
+                <svg
+                  class="review-card__source-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                  />
+                  <path
+                    d="M15.88 8.29L15 7.4l-4.44 4.5-1.56-1.5-.88.89 2.44 2.31z"
+                  />
+                </svg>
+                <span class="review-card__source-name">Yelp</span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              "As a woman who knows very little about cars, I've always felt
+              taken advantage of at repair shops. Not at Marcelins! They took
+              the time to explain everything to me and even showed me the worn
+              parts they were replacing. Fair pricing and excellent service."
+            </p>
+            <div class="review-card__author">
+              <img
+                src="https://picsum.photos/50/50?random=2"
+                alt="Customer"
+                class="review-card__avatar"
+              />
+              <div>
+                <h4 class="review-card__name">Amanda Wilson</h4>
+                <p class="review-card__date">April 3, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 3 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__stars">
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card__source">
+                <svg
+                  class="review-card__source-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9 12l-4.55 2.73 1.17-5.23-3.93-3.43 5.38-.47L9 1l1.93 4.6 5.38.47-3.93 3.43 1.17 5.23z"
+                  />
+                  <path
+                    d="M17 12l-4.55 2.73 1.17-5.23-3.93-3.43 5.38-.47L17 1l1.93 4.6 5.38.47-3.93 3.43 1.17 5.23z"
+                  />
+                </svg>
+                <span class="review-card__source-name">Facebook</span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              "My family has been using Marcelins for three generations. When my
+              son got his first car, this was the only place I trusted to make
+              sure it was safe and reliable. Their Pro Care plan is worth every
+              penny for the peace of mind it brings."
+            </p>
+            <div class="review-card__author">
+              <img
+                src="https://picsum.photos/50/50?random=3"
+                alt="Customer"
+                class="review-card__avatar"
+              />
+              <div>
+                <h4 class="review-card__name">Robert Thompson</h4>
+                <p class="review-card__date">March 29, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 4 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__stars">
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card__source">
+                <svg
+                  class="review-card__source-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                <span class="review-card__source-name">Google</span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              "When my car broke down on the interstate, I was panicking. Called
+              Marcelins and they not only talked me through what was happening
+              but sent someone to help me right away. They fixed my car within
+              24 hours and even gave me a loaner vehicle. Amazing service!"
+            </p>
+            <div class="review-card__author">
+              <img
+                src="https://picsum.photos/50/50?random=4"
+                alt="Customer"
+                class="review-card__avatar"
+              />
+              <div>
+                <h4 class="review-card__name">Jessica Kim</h4>
+                <p class="review-card__date">April 5, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 5 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__stars">
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card__source">
+                <svg
+                  class="review-card__source-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                  />
+                  <path
+                    d="M15.88 8.29L15 7.4l-4.44 4.5-1.56-1.5-.88.89 2.44 2.31z"
+                  />
+                </svg>
+                <span class="review-card__source-name">Yelp</span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              "The brake service I received was exceptional. They noticed
+              several potential issues during my free inspection that other
+              shops had missed. Their transparency and expertise kept my family
+              safe on the road. Highly recommend their Premium Care package!"
+            </p>
+            <div class="review-card__author">
+              <img
+                src="https://picsum.photos/50/50?random=5"
+                alt="Customer"
+                class="review-card__avatar"
+              />
+              <div>
+                <h4 class="review-card__name">Michael Chen</h4>
+                <p class="review-card__date">April 10, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 6 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__stars">
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="review-card__star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card__source">
+                <svg
+                  class="review-card__source-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9 12l-4.55 2.73 1.17-5.23-3.93-3.43 5.38-.47L9 1l1.93 4.6 5.38.47-3.93 3.43 1.17 5.23z"
+                  />
+                  <path
+                    d="M17 12l-4.55 2.73 1.17-5.23-3.93-3.43 5.38-.47L17 1l1.93 4.6 5.38.47-3.93 3.43 1.17 5.23z"
+                  />
+                </svg>
+                <span class="review-card__source-name">Facebook</span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              "Outstanding service! They helped me navigate my insurance claim
+              after an accident and handled all the paperwork. My car looks and
+              drives better than before. The detailing add-on made it feel brand
+              new. Truly a full-service experience!"
+            </p>
+            <div class="review-card__author">
+              <img
+                src="https://picsum.photos/50/50?random=6"
+                alt="Customer"
+                class="review-card__avatar"
+              />
+              <div>
+                <h4 class="review-card__name">Sarah Johnson</h4>
+                <p class="review-card__date">April 12, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-page__pagination">
+          <button class="reviews-page__page reviews-page__page--arrow">
+            &lt;
+          </button>
+          <button class="reviews-page__page reviews-page__page--active">
+            1
+          </button>
+          <button class="reviews-page__page">2</button>
+          <button class="reviews-page__page">3</button>
+          <button class="reviews-page__page reviews-page__page--arrow">
+            &gt;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer"></footer>
+  </body>
+</html>

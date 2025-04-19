@@ -45,7 +45,7 @@ const footer = () => {
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2024 Marcelins Auto Repair. All rights reserved.</p>
+        <p class="footer__copy">&copy; 2024 Marcelin's Auto Repair. All rights reserved.</p>
       </div>
     </div>
             `;

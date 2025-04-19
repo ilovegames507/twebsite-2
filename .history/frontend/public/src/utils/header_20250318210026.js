@@ -5,8 +5,8 @@ const header_import = () => {
             headerPlaceholder.innerHTML = `
                     <div class="header__container">
       <div class="header__title-container"> <img src="https://picsum.photos/1080/1080?random" id="img-link"class="header__logo"
-          alt="Marcelins Auto Repair Logo">
-        <a href="/" class="header__title">Marcelins Auto Repair</a>
+          alt="Marcelin's Auto Repair Logo">
+        <a href="/" class="header__title">Marcelin's Auto Repair</a>
       </div>
       <nav class="header__nav">
         <a class="header__link" href="#pricing">Servies</a>

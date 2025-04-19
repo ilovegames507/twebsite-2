@@ -3,7 +3,7 @@ import requests
 CALENDLY_API_TOKEN = "YOUR_CALENDLY_API_KEY"
 CALENDLY_EVENT_TYPE = "YOUR_EVENT_TYPE_UUID"  # Replace with your actual event UUID
 
-def book_appointment(name, phone, vehicle, location, issue, safe_place, mechanic_before, contact_method, services):
+def book_appointment(name, vehicle, safe_place, issue, location, mechanic_before, contact_method, services):
     headers = {
         "Authorization": f"Bearer {CALENDLY_API_TOKEN}",
         "Content-Type": "application/json"
